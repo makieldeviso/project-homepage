@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --common-padding: 8px;
+  --common-margin: 16px;
+}
+
+
+
+div.profile-links {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--common-margin);
+}
+
+div.profile-links a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+}
+
+
+div.project-cont {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-template-areas: 
+    "preview preview"
+    "title links"
+    "desc desc";
+}
+
+h2.project-title {
+  grid-area: title;
+}
+
+div.project-preview {
+  grid-area: preview;
+  width: 100%;
+  height: 300px;
+  border: 1px solid black;
+}
+
+div.project-link {
+  grid-area: links;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+a.repo-link, a.live-link {
+  display: flex;
+  justify-content: center;
+  width: 32px;  
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+a.repo-link {
+  background-image: url(../assets/open-repo.svg);
+}
+
+a.live-link {
+  background-image: url(../assets/open-live.svg);
+}
+
+p.project-desc {
+  grid-area: desc;
+}
