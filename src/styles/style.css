@@ -10,7 +10,6 @@
 }
 
 
-
 div.profile-links {
   width: max-content;
   display: flex;
@@ -42,14 +41,15 @@ h2.project-title {
   grid-area: title;
 }
 
-div.project-preview {
+img.project-preview {
   grid-area: preview;
   width: 100%;
   height: 300px;
   border: 1px solid black;
+  object-fit: cover;
 }
 
-div.project-link {
+div.project-links {
   grid-area: links;
   width: max-content;
   display: flex;
