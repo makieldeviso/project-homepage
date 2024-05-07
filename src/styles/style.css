@@ -47,6 +47,7 @@ img.project-preview {
   height: 300px;
   border: 1px solid black;
   object-fit: cover;
+  object-position: top left;
 }
 
 div.project-links {

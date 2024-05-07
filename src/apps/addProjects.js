@@ -10,7 +10,7 @@ class Project {
     this.liveLink = liveLink;
 
     // Save created project to filer
-    projectsFile[title] = this;
+    projectsFile[`${title.split(' ').join('-')}`] = this;
   }
 
   renderNode () {
@@ -63,6 +63,38 @@ const battleship = new Project (
   'Play against a computer in a Battleship game. Follows Test Driven Development requirement',
   'https://github.com/makieldeviso/battleship',
   'https://makieldeviso.github.io/battleship/'
+)
+
+const weatherApp = new Project (
+  'Weather App',
+  previewSources.weatherApp,
+  'Weather App using free tier WeatherAPI',
+  'https://github.com/makieldeviso/weather-app',
+  'https://makieldeviso.github.io/weather-app/'
+)
+
+const toDoList = new Project (
+  'Todo List',
+  previewSources.todoList,
+  'Todo List Web App',
+  'https://github.com/makieldeviso/todo-list',
+  'https://makieldeviso.github.io/todo-list/'
+)
+
+const restaurant = new Project (
+  'Restaurant',
+  previewSources.restaurant,
+  'Restaurant Webpage, featuring Filipino Cuisine',
+  'https://github.com/makieldeviso/restaurant',
+  'https://makieldeviso.github.io/restaurant/'
+)
+
+const library = new Project (
+  'Library',
+  previewSources.library,
+  'Library Web App that saves book details and logs user reading goals',
+  'https://github.com/makieldeviso/library',
+  'https://makieldeviso.github.io/library/'
 )
 
 const renderProjects = function () {
