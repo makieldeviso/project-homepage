@@ -46,6 +46,7 @@ class Project {
     [repoLink, liveLink].forEach(link => linksCont.appendChild(link));
 
     const description = document.createElement('p');
+    description.classList.add('project-desc');
     description.textContent = this.description;
 
     [previewImg, title, linksCont, description].forEach(node => projectCont.appendChild(node));
