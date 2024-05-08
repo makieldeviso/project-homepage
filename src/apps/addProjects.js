@@ -92,10 +92,18 @@ const restaurant = new Project (
 const library = new Project (
   'Library',
   previewSources.library,
-  'Library Web App that saves book details and logs user reading goals',
+  'Library web Application that saves book details and logs user reading goals',
   'https://github.com/makieldeviso/library',
   'https://makieldeviso.github.io/library/'
 )
+
+const tictactoe = new Project (
+  'Tic-tac-toe',
+  previewSources.tictactoe,
+  'Tic-tac-toe web application',
+  'https://github.com/makieldeviso/tic-tac-toe',
+  'https://makieldeviso.github.io/tic-tac-toe/'
+) 
 
 const renderProjects = function () {
   // ProjectsFile is an object filled with projects created by the class Project 
@@ -103,6 +111,5 @@ const renderProjects = function () {
     projectsFile[project].renderNode();
   }
 }
-
 
 export default renderProjects;
