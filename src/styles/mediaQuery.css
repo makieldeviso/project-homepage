@@ -1,6 +1,5 @@
-@media screen and (max-width: 425px ) {
-  nav {
-    left: 0;
+@media screen and (max-width: 768px ) {
+  div.nav-cont {
     grid-template-areas: 
       "logo nav-btn";
   }
@@ -25,5 +24,19 @@
     box-shadow: 0 0 5px 1px var(--yellow);
     padding: var(--common-padding);
     height: 110px;
+  }
+
+  div.footer-img {
+    padding: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  header {
+    grid-template-columns: 330px 1fr;
+  }
+
+  div.footer-img img {
+    max-width: 450px;
   }
 }

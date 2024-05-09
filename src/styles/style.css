@@ -19,7 +19,7 @@
   --min-margin: calc((var(--common-margin)) * 0.5);
   --icon-size: 24px;
 
-  --nav-height: 6vh;
+  --nav-height: 50px;
 
   --off-white: #F8F6F6;
   --yellow: #F5D061;
@@ -74,11 +74,25 @@ html {
 
 nav {
   height: var(--nav-height);
+  width: 100%;
+  max-width: unset;
 
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 2;
-  background-color: rgba(42, 54, 59, 0.8);
+  background-color: rgba(42, 54, 59, 0.95);
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.nav-cont {
+  max-width: 1024px;
+  width: 100%;
+  height: 100%;
+
   overflow: hidden;
   padding: 0 var(--common-padding);
 
@@ -87,11 +101,11 @@ nav {
   grid-template-rows: 1fr;
 
   grid-template-areas:
-    "logo page-links"
+    "logo page-links";
 }
 
 /* logo(start) */
-div.page-logo {
+a.page-logo {
   grid-area: logo;
   justify-self: start;
   height: 100%;
@@ -101,14 +115,23 @@ div.page-logo {
   display: grid;
   grid-template-columns: repeat(2, max-content);
   align-items: center;
+  text-decoration: none;
 }
 
-div.page-logo svg {
+a.page-logo:hover svg {
+  fill: var(--yellow);
+}
+
+a.page-logo:hover span {
+  color: var(--yellow);
+}
+
+a.page-logo svg {
   width: 1.5rem;
   fill: var(--off-white);
 }
 
-div.page-logo span {
+a.page-logo span {
   font-size: 1.5rem;
   font-family: var(--header-font);
   color: var(--off-white);
@@ -214,7 +237,7 @@ ul.page-links li {
 }
 
 ul.page-links a {
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: var(--off-white);
   text-decoration: none;
 }
@@ -232,9 +255,13 @@ ul.page-links li:has(a:active) {
 } 
 
 ul.page-links li:has(a:hover) {
-  background-color: var(--gray);
+  background-color: #233035;
   border-bottom: 5px solid var(--red);
 } 
+
+ul.page-links a:hover {
+  color: var(--yellow);
+}
 
 section#about, section#project, section#contact {
   scroll-behavior: smooth;
@@ -246,7 +273,7 @@ section#about, section#project, section#contact {
 header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  margin-top: var(--nav-height);
+  margin-top: calc(var(--nav-height) * 1.5);
   background-color: var(--yellow);
 }
 
@@ -265,7 +292,7 @@ section#hero {
   /* margin: calc(var(--nav-height) * 1.5) 0 var(--common-margin) 0; */
   padding: calc(var(--common-padding) * 2) var(--common-padding);
   background-color: var(--yellow);
-  height: 40vh;
+  height: 300px;
   min-width: 320px;
   max-width: 320px;
   min-height: max-content;
@@ -325,6 +352,7 @@ section#about p {
   color: var(--off-white);
   text-align: start;
   padding: 0 var(--common-padding);
+  font-size: 1.2rem;
 }
 
 div.profile-links {
@@ -334,6 +362,7 @@ div.profile-links {
   align-items: center;
   gap: var(--common-margin);
   justify-self: end;
+  padding: 0 var(--common-padding);
 }
 
 div.profile-links svg {
@@ -357,7 +386,7 @@ div.profile-links a {
 
 /* Main common (start) */
 main section  {
-  margin: var(--common-margin) 0;
+  margin: calc(var(--common-margin) * 2) 0;
   padding: var(--common-padding);
 }
 
@@ -382,7 +411,7 @@ section#projects {
 
 div#projects-main {
   display: grid;
-  gap: var(--common-margin);
+  gap: calc(var(--common-margin) * 2);
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   justify-content: center;
@@ -456,23 +485,27 @@ p.project-desc {
 /* Project section (end) */
 
 /* Footer (start) */
-  footer {
-    margin: var(--common-margin) 0 0 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: max-content 30vh;
-    grid-template-areas: 
-      "contact-sec"
-      "display-img";
-  }
-
-  
-/* Contact (start)) */
-section#contact {
-  grid-area: contact-sec;
-  padding: var(--common-padding);
+footer {
+  max-width: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(207, 70, 71, 0.8);
   border-top: 1px solid var(--yellow);
+  margin: var(--common-margin) 0 0 0;
+}
+
+div.footer-cont {
+  max-width: 1024px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Contact (start)) */
+section#contact {
+  padding: var(--common-padding);
+  
 }
 
 div.detail-cont {
@@ -526,18 +559,23 @@ section#contact div.profile-links {
 }
 
 div.footer-img {
-  grid-area: display-img;
   width: 100%;
   height: 100%;
-  background-image: url(../assets/footer-display.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding: calc(var(--common-padding) * 2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+div.footer-img img {
+  width: 100%;
+  object-fit: cover;
+}
 
 /* Contact (end)) */
 
 /* Footer (end) */
-
-
