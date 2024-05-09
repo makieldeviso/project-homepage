@@ -38,9 +38,11 @@ class Project {
     }
 
     const repoLink = createLink(this.repoLink, 'repo');
+    repoLink.setAttribute('title', 'Repository');
     repoLink.setAttribute('aria-label', `${this.title} repository`);
     
     const liveLink = createLink(this.liveLink, 'live');
+    liveLink.setAttribute('title', 'Live');
     liveLink.setAttribute('aria-label', `${this.title} live view`);
 
     [repoLink, liveLink].forEach(link => linksCont.appendChild(link));

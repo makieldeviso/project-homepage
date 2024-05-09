@@ -7,10 +7,16 @@
 </head>
 <body>
   <nav>
+		<div class="page-logo" aria-label="Site logo. Scroll page to top">
+			<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>computer-code</title> <g id="Layer_2" data-name="Layer 2"> <g id="invisible_box" data-name="invisible box"> <rect width="48" height="48" fill="none"></rect> <rect width="48" height="48" fill="none"></rect> <rect width="48" height="48" fill="none"></rect> </g> <g id="icons_Q2" data-name="icons Q2"> <g> <path d="M7,34H41a2,2,0,0,0,2-2V8a2,2,0,0,0-2-2H7A2,2,0,0,0,5,8V32A2,2,0,0,0,7,34ZM39,10V30H9V10"></path> <path d="M44,38H4a2,2,0,0,0,0,4H44a2,2,0,0,0,0-4Z"></path> <path d="M29.5,12.6a2.1,2.1,0,0,0-2.7-.2,1.9,1.9,0,0,0-.2,3L31.2,20l-4.6,4.6a1.9,1.9,0,0,0,.2,3,2.1,2.1,0,0,0,2.7-.2l5.9-6a1.9,1.9,0,0,0,0-2.8Z"></path> <path d="M21.2,12.4a2.1,2.1,0,0,0-2.7.2l-5.9,6a1.9,1.9,0,0,0,0,2.8l5.9,6a2.1,2.1,0,0,0,2.7.2,1.9,1.9,0,0,0,.2-3L16.8,20l4.6-4.6A1.9,1.9,0,0,0,21.2,12.4Z"></path> </g> </g> </g> </g></svg>
+			<span>FM</span>
+		</div>
+
+		<button id="nav-button" aria-label="page navigate">
+			<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7071 14.7071C12.3166 15.0976 11.6834 15.0976 11.2929 14.7071L6.29289 9.70711C5.90237 9.31658 5.90237 8.68342 6.29289 8.29289C6.68342 7.90237 7.31658 7.90237 7.70711 8.29289L12 12.5858L16.2929 8.29289C16.6834 7.90237 17.3166 7.90237 17.7071 8.29289C18.0976 8.68342 18.0976 9.31658 17.7071 9.70711L12.7071 14.7071Z" fill="#000000"></path> </g></svg>
+		</button>
+
     <ul class="page-links">
-			<li class="page-logo">
-				<a href="#hero">LOGO</a>
-			</li>
       <li>
 				<a href="#about">About</a>
 			</li>
@@ -23,21 +29,36 @@
     </ul>
   </nav>
 
-	<header id="hero">
-		<img 
+	<div id="drop-nav-links">
+		<ul class="alt-page-links">
+      <li>
+				<a href="#about">About</a>
+			</li>
+      <li>
+				<a href="#projects">Projects</a>
+			</li>
+      <li>
+				<a href="#contact">Contact</a>
+			</li>
+    </ul>
+	</div>
+
+
+	<header>
+		<section id="hero">
+			<img 
 			class="profile-pic"
 			src="./assets/profile-display.jpg" 
 			alt="profile"
 			width="250"
-		/>
-		<h1 class="my-name">
-			<span>Fred Mark</span>
-			<span>Baldeviso</span>
-		</h1>
-		<h2 class="my-title">Web Developer</h2>
-	</header>
+			/>
+			<h1 class="my-name">
+				<span>Fred Mark</span>
+				<span>Baldeviso</span>
+			</h1>
+			<h2 class="my-title">Web Developer</h2>
+		</section>
 
-	<main>
 		<section id="about">
 			<h3 class="sec-header">About</h3>
 			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam iure vitae inventore, sequi exercitationem dicta reprehenderit magni harum consectetur? Voluptatibus, nobis ab. Soluta aspernatur quam aperiam nisi qui dolorem esse?</p>
@@ -64,9 +85,11 @@
 						</svg>
 				</a>
 			</div>
-			
 		</section>
 
+	</header>
+
+	<main>
 		<section id="projects">
 			<h3 class="sec-header">Projects</h3>
 

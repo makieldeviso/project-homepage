@@ -1,0 +1,29 @@
+@media screen and (max-width: 425px ) {
+  nav {
+    left: 0;
+    grid-template-areas: 
+      "logo nav-btn";
+  }
+
+  button#nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul.page-links {
+    display: none;
+  }
+
+  div#drop-nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div#drop-nav-links.open {
+    box-shadow: 0 0 5px 1px var(--yellow);
+    padding: var(--common-padding);
+    height: 110px;
+  }
+}
